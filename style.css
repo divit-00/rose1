@@ -1,0 +1,47 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  font-family:'Great Vibes',cursive;
+}
+
+.container{
+  text-align:center;
+}
+
+.rose{
+  font-size:6rem;
+  cursor:pointer;
+  transition:transform .6s ease;
+}
+
+.rose:hover{
+  transform:scale(1.3) rotate(10deg);
+}
+
+.card{
+  margin-top:30px;
+  padding:25px 40px;
+  background:rgba(255,255,255,0.25);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  font-size:2.5rem;
+  color:#7a003c;
+  opacity:0;
+  transform:translateY(20px);
+  transition:all .8s ease;
+  pointer-events:none;
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
